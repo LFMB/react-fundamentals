@@ -1,5 +1,6 @@
 var React = require('react');
 var PropTypes = require('prop-types');
+var api = require('../utils/api');
 
 // if writing simple ui components with just render methods can do the following
 // stateless functional component
@@ -57,10 +58,15 @@ class Popular extends React.Component {
 	constructor(props) {
 		super(props); 
 		this.state = {
-			selectedLanguage: 'All'
+			selectedLanguage: 'All',
+			repos: null
 		};
 
 		this.updateLangauge = this.updateLangauge.bind(this);
+	}
+
+	componentDidMount(){
+		// stopped at 5:57 at https://learn.tylermcginnis.com/courses/50507/lectures/2466755#/questions/3
 	}
 
 	updateLangauge(lang){
